@@ -1,6 +1,6 @@
 import axios from 'axios';
 const BASE_URL = 'https://pixabay.com/api/';
-const API_KEY = '40629077-7f6390da5c999c47a6c8e50d2';
+const API_KEY = '38627834-dc2fd3d8d485c2fb974c91b78';
 
 export const getImg = async (searchValue, shownPage) => {
   const option = {
@@ -9,11 +9,11 @@ export const getImg = async (searchValue, shownPage) => {
     },
     params: {
       key: API_KEY,
-      q: `${searchValue}`,
+      q: searchValue,
       image_type: 'photo',
       photo: 'horizontal',
       safesearch: 'true',
-      page: `${shownPage}`,
+      page: shownPage,
       per_page: 12,
     },
   };
